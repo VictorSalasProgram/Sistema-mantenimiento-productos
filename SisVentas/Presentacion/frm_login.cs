@@ -33,6 +33,15 @@ namespace SisVentas.Presentacion
 
 
         #endregion
+        #region "MIS METODOS"
+        private void Logout(Object sender, FormClosedEventArgs e)
+        {
+            this.txt_login.Text = "";
+            this.txt_password.Text="";
+            this.txt_login.Select();
+
+        }
+        #endregion
 
         private void pnl_titulo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -59,12 +68,18 @@ namespace SisVentas.Presentacion
             TablaLogin = Datos.Login_us(txt_login.Text,txt_password.Text);
             if (TablaLogin.Rows.Count>0)
             {
-                MessageBox.Show("Session iniciada correctamente");
-
+                frm_Principal oFrm_principal = new frm_Principal();
+                oFrm_principal.Show();
+                oFrm_principal.FormClosed += Logout;
+                this.Hide();
+                
             }
             else
             {
-                MessageBox.Show("Login o password incorrectos");
+                MessageBox.Show("Login o password incorrectos",
+                                    "Aviso del sistema", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                    );
             }
         }
     }
