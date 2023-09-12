@@ -93,6 +93,7 @@
             this.btn_usuarios.TabIndex = 9;
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_empresas
             // 
