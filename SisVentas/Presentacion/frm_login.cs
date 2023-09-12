@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisVentas.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,28 @@ namespace SisVentas.Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void btn_iniciar_Click(object sender, EventArgs e)
+        {
+            DataTable TablaLogin = new DataTable();
+            D_usuarios Datos = new D_usuarios();
+            TablaLogin = Datos.Login_us(txt_login.Text,txt_password.Text);
+            if (TablaLogin.Rows.Count>0)
+            {
+                MessageBox.Show("Session iniciada correctamente");
+
+            }
+            else
+            {
+                MessageBox.Show("Login o password incorrectos");
+            }
         }
     }
 }

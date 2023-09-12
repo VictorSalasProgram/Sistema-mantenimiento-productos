@@ -29,11 +29,11 @@ namespace SisVentas.Datos
             MySqlConnection Cadena = new MySqlConnection();
             try
             {
-                Cadena.ConnectionString = "datasource" + this.Servidor +
+                Cadena.ConnectionString = "datasource=" + this.Servidor +
                                         ";port=" + this.Puerto +
                                         ";username=" + this.Usuario +
                                         ";password=" + this.Clave +
-                                        ";databse=" + this.Base;
+                                        ";database=" + this.Base;
 
             }
             catch (Exception ex) 
