@@ -69,6 +69,11 @@ namespace SisVentas.Presentacion
             if (TablaLogin.Rows.Count>0)
             {
                 frm_Principal oFrm_principal = new frm_Principal();
+                oFrm_principal.nCodigo_us = Convert.ToInt32(TablaLogin.Rows[0][0]);
+                oFrm_principal.cLogin_us = Convert.ToString(TablaLogin.Rows[0][1]);
+                oFrm_principal.cNombre_us = Convert.ToString(TablaLogin.Rows[0][2]);
+                oFrm_principal.cDescripcion_ru = Convert.ToString(TablaLogin.Rows[0][3]);
+                oFrm_principal.nCodigo_ru = Convert.ToInt32(TablaLogin.Rows[0][4]);
                 oFrm_principal.Show();
                 oFrm_principal.FormClosed += Logout;
                 this.Hide();
