@@ -41,7 +41,7 @@ namespace SisVentas.Presentacion
 
         private void frm_Principal_Load(object sender, EventArgs e)
         {
-            lbl_nombre_us.Text = "Login: "+ cLogin_us;
+            lbl_nombre_us.Text = "Usuario: "+ cNombre_us;
             lbl_descripcion_ru.Text = "Rol usuario: " + cDescripcion_ru;
         }
 
@@ -67,6 +67,19 @@ namespace SisVentas.Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            DialogResult Opcion;
+            Opcion = MessageBox.Show("¿Deseas cerrar sesion del sistema?",
+                                        "Aviso del sistema",
+                                        MessageBoxButtons.OKCancel,
+                                        MessageBoxIcon.Question);
+            if (Opcion == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }

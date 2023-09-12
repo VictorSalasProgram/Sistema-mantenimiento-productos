@@ -38,6 +38,7 @@ namespace SisVentas.Presentacion
         {
             this.txt_login.Text = "";
             this.txt_password.Text="";
+            this.Show();
             this.txt_login.Select();
 
         }
