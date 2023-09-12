@@ -139,6 +139,7 @@
             this.label1.Size = new System.Drawing.Size(270, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sistema de ventas";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // pictureBox1
             // 
