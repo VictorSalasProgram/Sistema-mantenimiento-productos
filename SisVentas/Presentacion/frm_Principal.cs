@@ -84,8 +84,19 @@ namespace SisVentas.Presentacion
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
-            frm_usuarios oFrm_us = new frm_usuarios();
-            oFrm_us.ShowDialog();
+            if (nCodigo_ru == 1) // Solo lo admin
+            {
+                frm_usuarios oFrm_us = new frm_usuarios();
+                oFrm_us.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("El usuario no posee permisos para esta opcion",
+                                "Aviso del sistema",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
+           
 
         }
     }

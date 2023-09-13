@@ -199,7 +199,7 @@ namespace SisVentas.Presentacion
                     this.Estado_botones_procesos(false);
                     this.Estado_botones_principales(true);
                     this.Listado_us("%");
-                    MessageBox.Show("Los datos han sido guardados con exito con el codigo #"+Rpta.Trim(),
+                    MessageBox.Show("Los datos han sido guardados con exito en el codigo #"+Rpta.Trim(),
                                     "Aviso del sistema",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -283,6 +283,25 @@ namespace SisVentas.Presentacion
         private void dgv_listado_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             this.SeleccionaItem();
+        }
+
+        private void btn_estado_Click(object sender, EventArgs e)
+        {
+            if (dgv_listado.Rows.Count > 0)
+            {
+                string Rpta = "";
+                D_usuarios Datos = new D_usuarios();
+                Rpta = Datos.Activo_us(Convert.ToInt32( dgv_listado.CurrentRow.Cells["codigo_us"].Value));
+                if (Rpta.Equals("OK"))
+                {
+                    this.Listado_us("%");
+                    MessageBox.Show("Estado actualizado","Aviso del sistema",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
