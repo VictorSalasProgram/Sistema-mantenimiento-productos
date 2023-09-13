@@ -72,6 +72,20 @@ namespace SisVentas.Presentacion
             this.Formato();
 
         }
+        private void Listado_ru()
+        {
+            try 
+            {
+                D_usuarios Datos = new D_usuarios();
+                cmb_rol_usuario.DataSource = Datos.Listado_ru();
+                cmb_rol_usuario.ValueMember = "codigo_ru";
+                cmb_rol_usuario.DisplayMember = "descripcion_ru";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
         #endregion
 
         private void btn_retornar_Click(object sender, EventArgs e)
@@ -108,6 +122,7 @@ namespace SisVentas.Presentacion
         private void frm_usuarios_Load(object sender, EventArgs e)
         {
             this.Listado_us("%");
+            this.Listado_ru();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
