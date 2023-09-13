@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_usuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_tareas = new System.Windows.Forms.Panel();
-            this.pnl_titulo = new System.Windows.Forms.Panel();
-            this.pnl_trabajo = new System.Windows.Forms.Panel();
-            this.btn_nuevo = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_estado = new System.Windows.Forms.Button();
             this.btn_retornar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_estado = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.pnl_titulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_login_us = new System.Windows.Forms.TextBox();
-            this.txt_password_us = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_trabajo = new System.Windows.Forms.Panel();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.dgv_listado = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmb_rol_usuario = new System.Windows.Forms.ComboBox();
             this.txt_nombre_us = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmb_rol_usuario = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgv_listado = new System.Windows.Forms.DataGridView();
-            this.btn_buscar = new System.Windows.Forms.Button();
+            this.txt_password_us = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_login_us = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnl_tareas.SuspendLayout();
             this.pnl_titulo.SuspendLayout();
-            this.pnl_trabajo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_trabajo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,69 @@
             this.pnl_tareas.Size = new System.Drawing.Size(200, 706);
             this.pnl_tareas.TabIndex = 0;
             // 
+            // btn_retornar
+            // 
+            this.btn_retornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_retornar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_retornar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_retornar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retornar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_retornar.Location = new System.Drawing.Point(16, 634);
+            this.btn_retornar.Name = "btn_retornar";
+            this.btn_retornar.Size = new System.Drawing.Size(181, 60);
+            this.btn_retornar.TabIndex = 3;
+            this.btn_retornar.Text = "Retornar";
+            this.btn_retornar.UseVisualStyleBackColor = false;
+            this.btn_retornar.Click += new System.EventHandler(this.btn_retornar_Click);
+            // 
+            // btn_estado
+            // 
+            this.btn_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_estado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_estado.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_estado.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_estado.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_estado.Location = new System.Drawing.Point(9, 236);
+            this.btn_estado.Name = "btn_estado";
+            this.btn_estado.Size = new System.Drawing.Size(181, 60);
+            this.btn_estado.TabIndex = 2;
+            this.btn_estado.Text = "Estado de Usuario";
+            this.btn_estado.UseVisualStyleBackColor = false;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_actualizar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actualizar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_actualizar.Location = new System.Drawing.Point(9, 160);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(181, 60);
+            this.btn_actualizar.TabIndex = 1;
+            this.btn_actualizar.Text = "Actualizar Usuario";
+            this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_nuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_nuevo.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevo.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nuevo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_nuevo.Location = new System.Drawing.Point(9, 85);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(181, 60);
+            this.btn_nuevo.TabIndex = 0;
+            this.btn_nuevo.Text = "Nuevo Usuario";
+            this.btn_nuevo.UseVisualStyleBackColor = false;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
+            // 
             // pnl_titulo
             // 
             this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
@@ -88,6 +151,27 @@
             this.pnl_titulo.Name = "pnl_titulo";
             this.pnl_titulo.Size = new System.Drawing.Size(841, 70);
             this.pnl_titulo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(90, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuarios";
             // 
             // pnl_trabajo
             // 
@@ -116,110 +200,193 @@
             this.pnl_trabajo.TabIndex = 2;
             this.pnl_trabajo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_trabajo_Paint);
             // 
-            // btn_nuevo
+            // btn_buscar
             // 
-            this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
-            this.btn_nuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_nuevo.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevo.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nuevo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_nuevo.Location = new System.Drawing.Point(9, 85);
-            this.btn_nuevo.Name = "btn_nuevo";
-            this.btn_nuevo.Size = new System.Drawing.Size(181, 60);
-            this.btn_nuevo.TabIndex = 0;
-            this.btn_nuevo.Text = "Nuevo Usuario";
-            this.btn_nuevo.UseVisualStyleBackColor = false;
-            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
+            this.btn_buscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_buscar.Location = new System.Drawing.Point(562, 307);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(92, 28);
+            this.btn_buscar.TabIndex = 18;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // btn_actualizar
+            // dgv_listado
             // 
-            this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
-            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_actualizar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_actualizar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_actualizar.Location = new System.Drawing.Point(9, 160);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(181, 60);
-            this.btn_actualizar.TabIndex = 1;
-            this.btn_actualizar.Text = "Actualizar Usuario";
-            this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.dgv_listado.AllowUserToAddRows = false;
+            this.dgv_listado.AllowUserToDeleteRows = false;
+            this.dgv_listado.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(128)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Ivory;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_listado.ColumnHeadersHeight = 35;
+            this.dgv_listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_listado.EnableHeadersVisualStyles = false;
+            this.dgv_listado.Location = new System.Drawing.Point(27, 361);
+            this.dgv_listado.Name = "dgv_listado";
+            this.dgv_listado.ReadOnly = true;
+            this.dgv_listado.RowHeadersWidth = 51;
+            this.dgv_listado.RowTemplate.Height = 24;
+            this.dgv_listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_listado.Size = new System.Drawing.Size(796, 263);
+            this.dgv_listado.TabIndex = 17;
+            this.dgv_listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listado_CellContentClick);
+            this.dgv_listado.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listado_CellEnter);
             // 
-            // btn_estado
+            // label2
             // 
-            this.btn_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
-            this.btn_estado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_estado.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_estado.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_estado.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_estado.Location = new System.Drawing.Point(9, 236);
-            this.btn_estado.Name = "btn_estado";
-            this.btn_estado.Size = new System.Drawing.Size(181, 60);
-            this.btn_estado.TabIndex = 2;
-            this.btn_estado.Text = "Estado de Usuario";
-            this.btn_estado.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(192, 311);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Buscar:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // btn_retornar
+            // txt_buscar
             // 
-            this.btn_retornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.btn_retornar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_retornar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_retornar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_retornar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_retornar.Location = new System.Drawing.Point(16, 634);
-            this.btn_retornar.Name = "btn_retornar";
-            this.btn_retornar.Size = new System.Drawing.Size(181, 60);
-            this.btn_retornar.TabIndex = 3;
-            this.btn_retornar.Text = "Retornar";
-            this.btn_retornar.UseVisualStyleBackColor = false;
-            this.btn_retornar.Click += new System.EventHandler(this.btn_retornar_Click);
+            this.txt_buscar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buscar.Location = new System.Drawing.Point(263, 308);
+            this.txt_buscar.MaxLength = 20;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(293, 27);
+            this.txt_buscar.TabIndex = 15;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
-            // label1
+            // btn_guardar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(90, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuarios";
+            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(116)))), ((int)(((byte)(181)))));
+            this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_guardar.Location = new System.Drawing.Point(409, 254);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(125, 34);
+            this.btn_guardar.TabIndex = 14;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Visible = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // pictureBox1
+            // btn_cancelar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.Location = new System.Drawing.Point(222, 254);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(125, 34);
+            this.btn_cancelar.TabIndex = 13;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Visible = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // label3
+            // label11
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(201, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Login:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(181, 209);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 20);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "*";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // txt_login_us
+            // label10
             // 
-            this.txt_login_us.Enabled = false;
-            this.txt_login_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_login_us.Location = new System.Drawing.Point(205, 59);
-            this.txt_login_us.MaxLength = 20;
-            this.txt_login_us.Name = "txt_login_us";
-            this.txt_login_us.Size = new System.Drawing.Size(165, 27);
-            this.txt_login_us.TabIndex = 1;
-            this.txt_login_us.TextChanged += new System.EventHandler(this.txt_login_us_TextChanged);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(181, 137);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "*";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(376, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "*";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(181, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 20);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "*";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(201, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Rol de usuario:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // cmb_rol_usuario
+            // 
+            this.cmb_rol_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_rol_usuario.Enabled = false;
+            this.cmb_rol_usuario.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_rol_usuario.FormattingEnabled = true;
+            this.cmb_rol_usuario.Location = new System.Drawing.Point(205, 205);
+            this.cmb_rol_usuario.Name = "cmb_rol_usuario";
+            this.cmb_rol_usuario.Size = new System.Drawing.Size(351, 30);
+            this.cmb_rol_usuario.TabIndex = 6;
+            this.cmb_rol_usuario.SelectedIndexChanged += new System.EventHandler(this.cmb_rol_usuario_SelectedIndexChanged);
+            // 
+            // txt_nombre_us
+            // 
+            this.txt_nombre_us.Enabled = false;
+            this.txt_nombre_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_us.Location = new System.Drawing.Point(205, 134);
+            this.txt_nombre_us.MaxLength = 20;
+            this.txt_nombre_us.Name = "txt_nombre_us";
+            this.txt_nombre_us.Size = new System.Drawing.Size(351, 27);
+            this.txt_nombre_us.TabIndex = 5;
+            this.txt_nombre_us.TextChanged += new System.EventHandler(this.txt_nombre_us_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(201, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nombre:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txt_password_us
             // 
@@ -244,192 +411,27 @@
             this.label4.Text = "Password:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txt_nombre_us
+            // txt_login_us
             // 
-            this.txt_nombre_us.Enabled = false;
-            this.txt_nombre_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_us.Location = new System.Drawing.Point(205, 134);
-            this.txt_nombre_us.MaxLength = 20;
-            this.txt_nombre_us.Name = "txt_nombre_us";
-            this.txt_nombre_us.Size = new System.Drawing.Size(351, 27);
-            this.txt_nombre_us.TabIndex = 5;
-            this.txt_nombre_us.TextChanged += new System.EventHandler(this.txt_nombre_us_TextChanged);
+            this.txt_login_us.Enabled = false;
+            this.txt_login_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_login_us.Location = new System.Drawing.Point(205, 59);
+            this.txt_login_us.MaxLength = 20;
+            this.txt_login_us.Name = "txt_login_us";
+            this.txt_login_us.Size = new System.Drawing.Size(165, 27);
+            this.txt_login_us.TabIndex = 1;
+            this.txt_login_us.TextChanged += new System.EventHandler(this.txt_login_us_TextChanged);
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(201, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Nombre:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // cmb_rol_usuario
-            // 
-            this.cmb_rol_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_rol_usuario.Enabled = false;
-            this.cmb_rol_usuario.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_rol_usuario.FormattingEnabled = true;
-            this.cmb_rol_usuario.Location = new System.Drawing.Point(205, 205);
-            this.cmb_rol_usuario.Name = "cmb_rol_usuario";
-            this.cmb_rol_usuario.Size = new System.Drawing.Size(351, 30);
-            this.cmb_rol_usuario.TabIndex = 6;
-            this.cmb_rol_usuario.SelectedIndexChanged += new System.EventHandler(this.cmb_rol_usuario_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(201, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Rol de usuario:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(181, 62);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "*";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(376, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "*";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(181, 137);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "*";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(181, 209);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 20);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "*";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cancelar.Location = new System.Drawing.Point(222, 254);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(125, 34);
-            this.btn_cancelar.TabIndex = 13;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Visible = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(116)))), ((int)(((byte)(181)))));
-            this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_guardar.Location = new System.Drawing.Point(409, 254);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(125, 34);
-            this.btn_guardar.TabIndex = 14;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.UseVisualStyleBackColor = false;
-            this.btn_guardar.Visible = false;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscar.Location = new System.Drawing.Point(263, 308);
-            this.txt_buscar.MaxLength = 20;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(293, 27);
-            this.txt_buscar.TabIndex = 15;
-            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Buscar:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // dgv_listado
-            // 
-            this.dgv_listado.AllowUserToAddRows = false;
-            this.dgv_listado.AllowUserToDeleteRows = false;
-            this.dgv_listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(128)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Ivory;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_listado.ColumnHeadersHeight = 35;
-            this.dgv_listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_listado.EnableHeadersVisualStyles = false;
-            this.dgv_listado.Location = new System.Drawing.Point(27, 361);
-            this.dgv_listado.Name = "dgv_listado";
-            this.dgv_listado.ReadOnly = true;
-            this.dgv_listado.RowHeadersWidth = 51;
-            this.dgv_listado.RowTemplate.Height = 24;
-            this.dgv_listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_listado.Size = new System.Drawing.Size(796, 263);
-            this.dgv_listado.TabIndex = 17;
-            this.dgv_listado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listado_CellContentClick);
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_buscar.Location = new System.Drawing.Point(562, 307);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(92, 28);
-            this.btn_buscar.TabIndex = 18;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = false;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(201, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Login:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // frm_usuarios
             // 
@@ -448,9 +450,9 @@
             this.pnl_tareas.ResumeLayout(false);
             this.pnl_titulo.ResumeLayout(false);
             this.pnl_titulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_trabajo.ResumeLayout(false);
             this.pnl_trabajo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listado)).EndInit();
             this.ResumeLayout(false);
 

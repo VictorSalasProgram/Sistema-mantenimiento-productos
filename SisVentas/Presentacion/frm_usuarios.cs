@@ -36,6 +36,9 @@ namespace SisVentas.Presentacion
             txt_password_us.Enabled = lEstado;
             txt_nombre_us.Enabled=lEstado;
             cmb_rol_usuario.Enabled = lEstado;
+            txt_buscar.Enabled = !lEstado;
+            dgv_listado.Enabled = !lEstado;
+            btn_buscar.Enabled = !lEstado;
         }
         private void Estado_botones_procesos(bool lEstado)
         {
@@ -85,6 +88,24 @@ namespace SisVentas.Presentacion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+        private void SeleccionaItem()
+        {
+            if (String.IsNullOrEmpty( Convert.ToString(dgv_listado.CurrentRow.Cells["codigo_us"].Value)))
+            {
+                MessageBox.Show("Seleccione un registro",
+                                 "Aviso del sistema",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                nCodigo_us = Convert.ToInt32( dgv_listado.CurrentRow.Cells["codigo_us"].Value);
+                txt_login_us.Text = dgv_listado.CurrentRow.Cells["login_us"].Value.ToString();
+                txt_password_us.Text = "";
+                txt_nombre_us.Text = dgv_listado.CurrentRow.Cells["nombre_us"].Value.ToString();
+                cmb_rol_usuario.Text = dgv_listado.CurrentRow.Cells["descripcion_ru"].Value.ToString();
             }
         }
         #endregion
@@ -245,6 +266,23 @@ namespace SisVentas.Presentacion
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            nEstado_guarda = 2; // Actualizar Registro
+            
+            this.Estado_texto(true);
+            txt_login_us.Enabled = false;
+            this.Estado_botones_procesos(true);
+            this.Estado_botones_principales(false);
+            this.txt_nombre_us.Focus();
+
+        }
+
+        private void dgv_listado_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.SeleccionaItem();
         }
     }
 }
