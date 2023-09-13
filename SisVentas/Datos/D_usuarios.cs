@@ -21,7 +21,7 @@ namespace SisVentas.Datos
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 MySqlCommand Comando = new MySqlCommand("usp_login_us", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("cLogin_us", MySqlDbType.VarChar).Value= cLogin_us;
+                Comando.Parameters.Add("cLogin_us", MySqlDbType.VarChar).Value = cLogin_us;
                 Comando.Parameters.Add("cPassword_us", MySqlDbType.VarChar).Value = cPassword_us;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -33,7 +33,34 @@ namespace SisVentas.Datos
                 MessageBox.Show(ex.Message, ex.StackTrace);
                 throw ex;
             }
-            finally 
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+        }
+        public DataTable Listado_us(string cTexto)
+        {
+            MySqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            MySqlConnection SqlCon = new MySqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                MySqlCommand Comando = new MySqlCommand("usp_listado_us", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("cTexto", MySqlDbType.VarChar).Value = cTexto;
+
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.StackTrace);
+                throw ex;
+            }
+            finally
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }

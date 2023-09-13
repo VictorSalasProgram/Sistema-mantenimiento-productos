@@ -70,6 +70,7 @@
             this.pnl_tareas.Controls.Add(this.btn_estado);
             this.pnl_tareas.Controls.Add(this.btn_actualizar);
             this.pnl_tareas.Controls.Add(this.btn_nuevo);
+            this.pnl_tareas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_tareas.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_tareas.Location = new System.Drawing.Point(592, 0);
             this.pnl_tareas.Name = "pnl_tareas";
@@ -78,7 +79,7 @@
             // 
             // pnl_titulo
             // 
-            this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(128)))), ((int)(((byte)(167)))));
+            this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
             this.pnl_titulo.Controls.Add(this.pictureBox1);
             this.pnl_titulo.Controls.Add(this.label1);
             this.pnl_titulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,6 +118,7 @@
             // btn_nuevo
             // 
             this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_nuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nuevo.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,10 +129,12 @@
             this.btn_nuevo.TabIndex = 0;
             this.btn_nuevo.Text = "Nuevo Usuario";
             this.btn_nuevo.UseVisualStyleBackColor = false;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_actualizar
             // 
             this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualizar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +149,7 @@
             // btn_estado
             // 
             this.btn_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.btn_estado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_estado.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_estado.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,6 +164,7 @@
             // btn_retornar
             // 
             this.btn_retornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.btn_retornar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_retornar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_retornar.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,6 +210,7 @@
             // 
             // txt_login_us
             // 
+            this.txt_login_us.Enabled = false;
             this.txt_login_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_login_us.Location = new System.Drawing.Point(36, 63);
             this.txt_login_us.MaxLength = 20;
@@ -213,6 +220,7 @@
             // 
             // txt_password_us
             // 
+            this.txt_password_us.Enabled = false;
             this.txt_password_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password_us.Location = new System.Drawing.Point(222, 63);
             this.txt_password_us.MaxLength = 20;
@@ -233,6 +241,7 @@
             // 
             // txt_nombre_us
             // 
+            this.txt_nombre_us.Enabled = false;
             this.txt_nombre_us.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_us.Location = new System.Drawing.Point(36, 138);
             this.txt_nombre_us.MaxLength = 20;
@@ -252,6 +261,7 @@
             // 
             // cmb_rol_usuario
             // 
+            this.cmb_rol_usuario.Enabled = false;
             this.cmb_rol_usuario.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_rol_usuario.FormattingEnabled = true;
             this.cmb_rol_usuario.Location = new System.Drawing.Point(36, 209);
@@ -326,6 +336,8 @@
             this.btn_cancelar.TabIndex = 13;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Visible = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_guardar
             // 
@@ -340,6 +352,7 @@
             this.btn_guardar.TabIndex = 14;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Visible = false;
             // 
             // txt_buscar
             // 
@@ -396,9 +409,12 @@
             this.Controls.Add(this.pnl_trabajo);
             this.Controls.Add(this.pnl_titulo);
             this.Controls.Add(this.pnl_tareas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_usuarios";
+            this.Load += new System.EventHandler(this.frm_usuarios_Load);
             this.pnl_tareas.ResumeLayout(false);
             this.pnl_titulo.ResumeLayout(false);
             this.pnl_titulo.PerformLayout();
