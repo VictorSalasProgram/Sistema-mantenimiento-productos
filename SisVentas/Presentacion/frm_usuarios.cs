@@ -1,4 +1,5 @@
 ﻿using SisVentas.Datos;
+using SisVentas.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -147,7 +148,43 @@ namespace SisVentas.Presentacion
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (txt_login_us.Text==String.Empty
+                || txt_password_us.Text == String.Empty
+                || txt_nombre_us.Text == String.Empty)
+            {
+                MessageBox.Show("Ingrese los datos requeridos (*)",
+                                "Aviso del sistema",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                     
+            }
+            else
+            {
+                string Rpta;
+                E_Usuarios oPro = new E_Usuarios();
+                oPro.Codigo_us = nCodigo_us;
+                oPro.Login_us = txt_login_us.Text;
+                oPro.Password_us = txt_password_us.Text;
+                oPro.Nombre_us = txt_nombre_us.Text;
+                oPro.Codigo_ru = Convert.ToInt32(cmb_rol_usuario.SelectedValue);
+                D_usuarios Datos = new D_usuarios();
+                Rpta = Datos.Guardar_us(nEstado_guarda, oPro);
+                bool esNumero = int.TryParse(Rpta, out int xCodigo);
+                if (esNumero==true)
+                {
+                    nEstado_guarda = 0;
+                    nCodigo_us = 0;
+                    this.Limpia_texto();
+                    this.Estado_botones_procesos(false);
+                    this.Estado_botones_principales(true);
+                    this.Listado_us("%");
+                    MessageBox.Show("Los datos han sido guardados con exito con el codigo #"+Rpta.Trim(),
+                                    "Aviso del sistema",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
 
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
